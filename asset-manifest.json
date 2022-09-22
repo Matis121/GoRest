@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GoRest/static/css/main.a68f24da.css",
+    "main.js": "/GoRest/static/js/main.49781bf7.js",
+    "index.html": "/GoRest/index.html",
+    "main.a68f24da.css.map": "/GoRest/static/css/main.a68f24da.css.map",
+    "main.49781bf7.js.map": "/GoRest/static/js/main.49781bf7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a68f24da.css",
+    "static/js/main.49781bf7.js"
+  ]
+}
