@@ -88,7 +88,6 @@ const PostsPage = () => {
                               <div
                                 className={styles.posts__post__comment__info}
                               >
-                                {/* <p>{comment.post_id}</p> */}
                                 <h2>{comment.name}</h2>
                                 <p
                                   className={

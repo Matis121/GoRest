@@ -14,7 +14,7 @@ const UsersPage = () => {
 
   // This Hook is to open or close users form modal
 
-  const [handleModal, setHandleModal] = useState(false);
+  const [handleUserModal, setHandleUserModal] = useState(false);
 
   // Fetching data (users) from API
 
@@ -34,12 +34,14 @@ const UsersPage = () => {
   return (
     <>
       <div className={styles.addUser}>
-        <button onClick={() => setHandleModal(true)}>Add User</button>
+        <button onClick={() => setHandleUserModal(true)}>Add User</button>
         {/* Function to hide/show the component*/}
-        {handleModal === false ? null : (
+        {handleUserModal === false ? null : (
           <AddUserForm
-            openCloseModal={handleModal}
-            closeModal={(handleModal) => setHandleModal(handleModal)}
+            openCloseUserModal={handleUserModal}
+            closeModal={(handleUserModal) =>
+              setHandleUserModal(handleUserModal)
+            }
           ></AddUserForm>
         )}
       </div>

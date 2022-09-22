@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./TodosPage.module.scss";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import dayjs from "dayjs";
 
 const TodosPage = () => {
   // Assign data (posts) to a variable
@@ -39,7 +40,10 @@ const TodosPage = () => {
                         <div className={styles.users__user}>
                           <h1>{todo.title}</h1>
                           <p>
-                            <span>Date:</span> {todo.due_on}
+                            <span>Date:</span>{" "}
+                            {`${dayjs(todo.due_on).format(
+                              "DD MMM YYYY hh:mm"
+                            )}`}
                           </p>
                         </div>
                       </div>
@@ -62,7 +66,10 @@ const TodosPage = () => {
                         <div className={styles.users__user}>
                           <h1>{todo.title}</h1>
                           <p>
-                            <span>Date:</span> {todo.due_on}
+                            <span>Date:</span>{" "}
+                            {`${dayjs(todo.due_on).format(
+                              "DD MMM YYYY hh:mm"
+                            )}`}
                           </p>
                         </div>
                       </div>

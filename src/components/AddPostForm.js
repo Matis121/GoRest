@@ -14,11 +14,15 @@ export class AddPostForm extends Component {
     };
   }
 
+  // Assigning a value to this.state
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
+
+  // Posting data to Rest API
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -66,8 +70,6 @@ export class AddPostForm extends Component {
                 <label>Body</label>
                 <textarea
                   className={styles.form__email__textArea}
-                  rows="5"
-                  cols="33"
                   name="body"
                   value={body}
                   onChange={this.handleChange}

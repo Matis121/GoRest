@@ -15,11 +15,15 @@ export class AddUserForm extends Component {
     };
   }
 
+  // Assigning a value to this.state
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
+
+  // Posting data to Rest API
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +45,7 @@ export class AddUserForm extends Component {
     return (
       <div
         className={
-          this.props.openCloseModal === true
+          this.props.openCloseUserModal === true
             ? styles.wrapper
             : styles.wrapper__notActive
         }
