@@ -26,7 +26,6 @@ export class AddPostForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
     axios
       .post(
         "https://gorest.co.in/public/v1/users/36/posts?access-token=e6022a1f29796089d2ddea39eaf9b7433a6953620212a7ac08cb818ef969cf3c",
@@ -38,6 +37,11 @@ export class AddPostForm extends Component {
       .catch((err) => {
         console.log(err);
       });
+
+    this.setState({
+      title: "",
+      body: "",
+    });
   };
 
   render() {

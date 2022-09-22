@@ -23,7 +23,6 @@ const UsersPage = () => {
       .get("https://gorest.co.in/public/v1/users")
       .then((res) => {
         const FetchData = res.data.data;
-        console.log(res.data);
         setUsers(FetchData);
       })
       .catch((err) => {

@@ -38,6 +38,12 @@ export class AddUserForm extends Component {
       .catch((err) => {
         console.log(err);
       });
+
+    this.setState({
+      name: "",
+      email: "",
+      gender: "",
+    });
   };
 
   render() {

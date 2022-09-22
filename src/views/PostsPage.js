@@ -27,7 +27,6 @@ const PostsPage = () => {
       .get("https://gorest.co.in/public/v1/posts")
       .then((res) => {
         const FetchData = res.data.data;
-        console.log(FetchData);
         setPosts(FetchData);
       })
       .catch((err) => {
