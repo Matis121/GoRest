@@ -7,7 +7,7 @@ const Navigation = () => {
     <div>
       <header className={styles.navbar}>
         <h1>
-          <Link to="/">Go Rest</Link>
+          <Link to="/users">Go Rest</Link>
         </h1>
         <ul>
           <li>

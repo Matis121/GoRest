@@ -12,6 +12,7 @@ function App() {
         <Navigation></Navigation>
         <Routes>
           <Route path="/" exact element={<UsersPage />}></Route>
+          <Route path="/GoRest" element={<UsersPage />}></Route>
           <Route path="/posts" element={<PostsPage />}></Route>
           <Route path="/todos" element={<TodosPage />}></Route>
         </Routes>
