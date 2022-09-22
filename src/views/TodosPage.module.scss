@@ -1,0 +1,103 @@
+@import ".././variables.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.todos {
+  width: 70%;
+  display: flex;
+  margin-top: 7rem;
+
+  &__pending {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      color: $grayish-cyan;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+    }
+  }
+  &__completed {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      color: $grayish-cyan;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.users {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__user {
+    width: 50rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid $grayish-cyan;
+    transition: all 0.3s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    &:hover {
+      background-color: $white;
+    }
+
+    & h1 {
+      color: $very-dark-cyan;
+      padding: 1rem 0rem;
+      font-size: $font-small;
+    }
+
+    & p {
+      color: $grayish-cyan;
+      font-size: $font-small;
+      margin-top: 1rem;
+      padding: 0rem 1rem;
+    }
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .todos {
+    width: 100%;
+  }
+
+  .users {
+    width: 80%;
+    &__user {
+      padding: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .users {
+    &__user {
+      & p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

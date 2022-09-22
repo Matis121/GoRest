@@ -1,0 +1,107 @@
+@import ".././variables.scss";
+
+.addPost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__button {
+    & button {
+      border: none;
+      background-color: $dark-grayish-cyan;
+      color: white;
+      padding: 1.7rem 5rem;
+      border-radius: 100px;
+      font-size: $font-medium;
+      font-family: inherit;
+      font-weight: 600;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $very-dark-cyan;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.posts {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__post {
+    width: 70rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    border: 2px solid $grayish-cyan;
+    transition: all 0.3s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    &__comment {
+      background-color: $light-grayish-cyan;
+      border-radius: 15px;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem 1rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__icon {
+        font-size: 3rem;
+        color: $grayish-cyan;
+        margin-top: 1.5rem;
+      }
+      &__info {
+        &__comment {
+          margin-top: 0.5rem;
+        }
+      }
+      & h2 {
+        color: $very-dark-cyan;
+        padding: 0rem 1rem;
+        margin-top: 1rem;
+        margin-bottom: -0.5rem;
+      }
+
+      & p {
+        color: black;
+      }
+    }
+
+    &:hover {
+      background-color: $white;
+    }
+
+    & h1 {
+      color: $very-dark-cyan;
+      padding: 0 0 1rem 0;
+    }
+
+    & p {
+      color: $grayish-cyan;
+      font-size: $font-small;
+      padding: 0rem 1rem;
+    }
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .posts {
+    &__post {
+      width: 100%;
+      padding: 0rem;
+    }
+  }
+}

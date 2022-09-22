@@ -1,0 +1,83 @@
+@import ".././variables.scss";
+
+.addUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & button {
+    border: none;
+    background-color: $dark-grayish-cyan;
+    color: white;
+    padding: 1.7rem 5rem;
+    border-radius: 100px;
+    font-size: $font-medium;
+    font-family: inherit;
+    font-weight: 600;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $very-dark-cyan;
+      cursor: pointer;
+    }
+  }
+}
+
+.users {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  align-items: center;
+  justify-content: center;
+  &__user {
+    width: 50rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    border: 2px solid $grayish-cyan;
+    transition: all 0.3s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    &__icon {
+      margin-right: 1rem;
+      margin-bottom: -2rem;
+
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      background-color: $white;
+    }
+
+    & h1 {
+      color: $very-dark-cyan;
+      padding: 1rem 0rem;
+      display: flex;
+    }
+
+    & p {
+      color: $grayish-cyan;
+      font-size: $font-small;
+      margin-top: 1rem;
+      padding: 0rem 1rem;
+    }
+
+    & span {
+      font-weight: 700;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .users {
+    &__user {
+      width: 100vw;
+      padding: 2rem;
+    }
+  }
+}
