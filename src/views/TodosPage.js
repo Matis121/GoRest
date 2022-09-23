@@ -17,7 +17,6 @@ const TodosPage = () => {
       .then((res) => {
         const FetchData = res.data.data;
         setTodos(FetchData);
-        console.log(FetchData);
       })
       .catch((err) => {
         console.log(err);
