@@ -39,6 +39,8 @@ export class AddUserForm extends Component {
         console.log(err);
       });
 
+      // Reset the fields
+
     this.setState({
       name: "",
       email: "",

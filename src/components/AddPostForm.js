@@ -38,6 +38,8 @@ export class AddPostForm extends Component {
         console.log(err);
       });
 
+    // Reset the fields
+
     this.setState({
       title: "",
       body: "",
